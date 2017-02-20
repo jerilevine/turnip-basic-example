@@ -6,6 +6,9 @@ require 'fileutils'
 Dir.glob("./*.steps.rb") { |f| load f, true }
 
 RSpec.configure do |config|
+  config.color = true
+  config.formatter = :documentation
+  
   config.before(:suite) do
     Capybara.run_server = false
 
@@ -14,7 +17,5 @@ RSpec.configure do |config|
     Capybara.current_session.driver.browser.manage.window.maximize
     Capybara.default_max_wait_time = 5   # seconds
 
-    config.color = true
-    config.formatter = :documentation
   end
 end
