@@ -1,0 +1,3 @@
+#!/bin/bash
+
+rspec --require turnip/rspec --require './turnip_helper.rb' --pattern "*.feature" $*
