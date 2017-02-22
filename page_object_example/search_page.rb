@@ -1,4 +1,5 @@
 require './base_page.rb'
+require './results_page.rb'
 
 class SearchPage < BasePage
   def initialize
